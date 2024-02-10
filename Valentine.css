@@ -63,8 +63,8 @@ body {
     transform: translate(-50%, -50%); /* Center the heart */
     margin: 0px;
     position:absolute;
-    width: 400px;
-    height: 500px;
+    width: 600px;
+    height: 800px;
     opacity: 0; /* Initially hidden */
     max-height: 0; /* Initially hidden */
     overflow: hidden; /* Hide overflow content */
