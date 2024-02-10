@@ -1,0 +1,118 @@
+/* CSS */
+body {
+    background-color: #facccc;
+    display: flex;
+    height: 100vh;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.heart {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 60%;
+    left: 50.75%;
+    transform: translate(-50%, -50%); /* Center the heart */
+    margin: 10px;
+    user-select: none;
+    animation: heartbeat 1.5s infinite;
+    transform-origin: center; /* Ensure scaling occurs from the center of the heart */
+}
+
+.appear {
+    width: 100px;
+    position: absolute;
+    top:55%;
+    left:53.25%;
+    transform: translate(-50%,-50%);
+    background-color: #ecaaaa;
+    border-radius: 10px;
+    margin: 0;
+    height: 70px;
+    text-align: center;
+    display: block;
+    user-select: none;
+}
+
+.heart:active + .appear{
+    display:none;
+}
+
+.heart:active + .letter{
+    display:none;
+}
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.letter
+  {
+    background-color: #f0f0f0; /* Light gray background color */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3); /* Shadow effect */
+    padding: 20px; /* Add some padding for content */
+    top: 35%;
+    left: 53.25%;
+    transform: translate(-50%, -50%); /* Center the heart */
+    margin: 0px;
+    position:absolute;
+    width: 400px;
+    height: 500px;
+    opacity: 0; /* Initially hidden */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow content */
+    transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease; /* Smooth transition */
+    transform-origin: top center; /* Set the transform origin to top center */
+    user-select: none;
+}
+  .sincere{
+    position: relative;
+    margin:0px;
+    top:10%;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    width: 100px;
+  }
+  .title{
+    position: relative;
+    margin:0px;
+    top:-5%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .content{
+    position: relative;
+    width: 340px;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    top:35%;
+    left: 50%;
+  }
+  .out{
+    position: relative;
+    width: 120px;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    top:2.5%;
+    left: 85%;
+    margin:0px;
+  }
+  
+  .letter * {
+    transition: inherit;
+}
+.letter.roll-out {
+  transform: translate(-50%, -50%) scaleY(1); /* Expand vertically */
+  opacity: 1; /* Show the letter */
+  max-height: 500px; /* Set maximum height to reveal the full letter */
+}
